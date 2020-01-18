@@ -1,1 +1,15 @@
-<h1> This is the counter </h1>
+<h1> Welcome to the Word Counter App </h1>
+<a href="{% url 'home' %}">New Session</a>
+<a href="{% url 'about' %}">about page</a>
+<h3>Word Count: {{ counter }}</h3>
+<h3>Input Text: </h3>
+{{ inputtext }}
+<br />
+{{ worddictionaryall }}
+<br />
+<br />
+{% for word, counttotal in sortedWordCount %}
+{{ word }} - {{ counttotal }}
+<br />
+
+{% endfor %}
